@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="fixed bottom-0 w-full">
       <Container>
-        <div class="flex justify-center items-center">
+        <div className="flex justify-center items-center">
           <Block bordercolor="border-yellow" class="w-1/2">
             <div className="flex justify-center container items-center px-4 mx-auto">
               <p>

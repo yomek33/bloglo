@@ -28,11 +28,14 @@ export default function About() {
         <Image
           src={eyecatch}
           alt=""
-          layout="responsive"
           sizes="(min-width: 1152px) 1152px, 100vw"
           priority
           placeholder="blur"
-          class="rounded-lg"
+          className="rounded-lg"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
         />
       </figure>
       <div className="flex  justify-around items-strech">

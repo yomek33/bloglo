@@ -33,7 +33,7 @@ export default function Nav() {
               id="example-navbar-danger"
             >
               <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-                <li legacyBehavior className="nav-item">
+                <li className="nav-item">
                   <Link
                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
                     href="/About"
@@ -52,13 +52,13 @@ export default function Nav() {
                 </a>
               </li> */}
                 <li className="nav-item">
-                  <a
+                  <Link
                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
                     href="#pablo"
                   >
                     <i className="fab fa-pinterest text-lg leading-lg opacity-75"></i>
                     <span className="ml-2">Post</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
