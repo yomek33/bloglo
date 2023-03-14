@@ -37,7 +37,7 @@ export default function About() {
       </figure>
       <div className="flex  justify-around items-strech">
         <div className="mr-2 sm:w-3/5  hidden sm:block">
-          <Block className="min-h-300 　w-full max-w-4xl my-5 flex items-center justify-center flex-col">
+          <Block className="min-h-300 w-full max-w-4xl my-5 flex items-center justify-center flex-col">
             準備中....
           </Block>
         </div>
