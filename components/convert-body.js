@@ -8,12 +8,12 @@ export default function ConvertBody({ contentHTML }) {
         const { src, alt, width, height } = node.attribs;
         return (
           <Image
-            layout="responsive"
             src={src}
             width={width}
             height={height}
             alt={alt}
             sizes="(min-width: 768px) 768px, 100vw"
+            className="rounded-lg"
           />
         );
       }
@@ -21,7 +21,9 @@ export default function ConvertBody({ contentHTML }) {
   });
   return (
     <>
-      <div className="prose max-w-none">{contentReact}</div>
+      <div className="prose max-w-none prose-a:decoration-pink-100">
+        {contentReact}
+      </div>
     </>
   );
 }
