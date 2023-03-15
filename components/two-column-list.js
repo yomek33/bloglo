@@ -1,5 +1,5 @@
 export function TwoColumnList({ children }) {
-  return <div className="lg:flex  justify-around items-strech">{children}</div>;
+  return <div className="lg:flex  justify-around items-start">{children}</div>;
 }
 
 export function TwoColumnListMain({ children }) {

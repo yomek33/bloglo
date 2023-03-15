@@ -32,7 +32,7 @@ export default function About() {
           priority
           placeholder="blur"
           loader={microCMSLoader}
-          className="rounded-lg"
+          className="rounded-lg mb-3"
           style={{
             width: "100%",
             height: "auto",

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
-    <footer className="bottom-0 w-full">
+    <footer className="bottom-0 mt-auto w-full">
       <Container>
         <div className="flex justify-center items-center">
           <Block bordercolor="border-yellow" className="w-1/2">
