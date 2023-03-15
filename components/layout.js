@@ -4,7 +4,7 @@ import Footer from "components/footer";
 export default function Layout({ children }) {
   return (
     <>
-      <div className="flex px-2 flex-col min-h-screen">
+      <div className="relative flex px-2 flex-col min-h-screen">
         <Header />
 
         <main>{children}</main>
