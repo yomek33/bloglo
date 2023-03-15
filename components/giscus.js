@@ -13,13 +13,23 @@ const giscusscript = `<script src="https://giscus.app/client.js"
         crossorigin="anonymous"
         async>
 </script>`;
-import parse from "html-react-parser";
+import Giscus from "@giscus/react";
 
-export default function Giscus() {
-  const contentReact = parse(giscusscript);
+export default function Comments() {
   return (
-    <>
-      <div className="prose">{contentReact}</div>
-    </>
+    <Giscus
+      repo="yomek33/bloglo"
+      repoId="R_kgDOJIqpOA"
+      ategory="Announcements"
+      categoryId="DIC_kwDOJIqpOM4CU5j6"
+      mapping="pathname"
+      strict="0"
+      reactionsEnabled="1"
+      emitMetadata="0"
+      inputPosition="bottom"
+      theme="preferred_color_scheme"
+      lang="ja"
+      crossorigin="anonymous"
+    />
   );
 }
