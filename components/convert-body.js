@@ -21,7 +21,7 @@ export default function ConvertBody({ contentHTML }) {
   });
   return (
     <>
-      <div className="prose">{contentReact}</div>
+      <div className="prose max-w-none">{contentReact}</div>
     </>
   );
 }
