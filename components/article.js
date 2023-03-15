@@ -52,14 +52,14 @@ export default function Article({
             </div>
           </div>
         </Title>
-        <div className="px-10 flex-col justify-center">
+        <div className="px-1 lg:px-5 flex-col justify-center">
           <figure>
             <Image
               key={eyecatch.url}
               src={eyecatch.url}
               alt=""
               style={{
-                width: "70%",
+                width: "100%",
                 height: "auto",
               }}
               width={eyecatch.width}
@@ -69,7 +69,7 @@ export default function Article({
               placeholder="blur"
               blurDataURL={eyecatch.blurDataURL}
               loader={microCMSLoader}
-              className="justify-center mb-10 mx-auto w-full"
+              className="justify-center mb-10 mx-auto w-full h-full"
             />
           </figure>
           <PostBody>

@@ -13,7 +13,7 @@ export default function Posts({ posts }) {
             className="group flex justify-center items-center text-sm font-medium leading-5 text-gray-900"
             key={slug}
           >
-            <div className="container px-5 py-5 pm-5 sm:py-10 mx-auto">
+            <div className="container px-1 py-5 pm-5 sm:py-10 mx-auto">
               <Link href={`/post/${slug}`}>
                 <div className="mx-auto flex flex-wrap">
                   <Image
