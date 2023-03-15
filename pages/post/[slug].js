@@ -11,6 +11,8 @@ import { getPlaiceholder } from "plaiceholder";
 // ローカルの代替アイキャッチ画像
 import { eyecatchLocal } from "lib/constants";
 import Article from "@/components/article";
+import Block from "../../components/block";
+import Comments from "../../components/giscus";
 
 export default function Post({
   title,
@@ -46,6 +48,9 @@ export default function Post({
           categories={categories}
         />
       </article>
+      <Block>
+        <Comments />
+      </Block>
     </Container>
   );
 }
