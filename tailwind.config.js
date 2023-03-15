@@ -11,11 +11,16 @@ module.exports = {
     extend: {
       colors: {
         blue: "#89c3eb",
-        purple: "#cc7eb1",
-        pink: "#f5b2b2",
+        purple: "#CCCCFF",
+        pink: {
+          100: "#f5b2b2",
+          200: "#FAA0A0",
+          300: "#f7b7b7",
+        },
         yellow: "#f8e58c",
         lightgreen: "#98d98e",
         mint: "#9EDEC6",
+        navy: "#191970",
       },
     },
   },

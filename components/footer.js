@@ -1,13 +1,11 @@
 import Container from "components/container";
 
-import Social from "components/social";
-import styles from "styles/footer.module.css";
 import Block from "./block";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 w-full">
+    <footer className="bottom-0 w-full">
       <Container>
         <div className="flex justify-center items-center">
           <Block bordercolor="border-yellow" class="w-1/2">

@@ -1,13 +1,11 @@
-import styles from "styles/two-column.module.css";
-
 export function TwoColumn({ children }) {
-  return <div className={styles.flexContainer}>{children}</div>;
+  return <div className="lg:flex  justify-around items-strech">{children}</div>;
 }
 
 export function TwoColumnMain({ children }) {
-  return <div className={styles.main}>{children}</div>;
+  return <div className="mr-2 lg:w-3/5  hidden sm:block">{children}</div>;
 }
 
 export function TwoColumnSidebar({ children }) {
-  return <div className={styles.sidebar}>{children}</div>;
+  return <div className="ml-2 lg:w-2/5">{children}</div>;
 }

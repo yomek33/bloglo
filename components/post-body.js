@@ -1,4 +1,3 @@
-import styles from "styles/post-body.module.css";
 export default function PostBody({ children }) {
-  return <div className={styles.stack}>{children}</div>;
+  return <div className="space-y-6 ">{children}</div>;
 }
