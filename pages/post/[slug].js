@@ -48,7 +48,7 @@ export default function Post({
           categories={categories}
         />
       </article>
-      <Block>
+      <Block bordercolor="border-blue">
         <Comments />
       </Block>
     </Container>

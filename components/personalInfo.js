@@ -10,17 +10,20 @@ export default function Personal() {
     <Block bordercolor="border-mint">
       <div className="w-full max-w-4xl my-5 flex items-center justify-center flex-col">
         <div className="flex-row ">
-          <div className="relative mx-10 aspect-square  w-20 lg:w-56">
-            <Image
-              src={icon}
-              fill
-              alt="icon"
-              className="rounded-full border border-slate-50"
-              sizes="(max-width: 1024px) 18vw,
-                    22vw"
-              loader={microCMSLoader}
-            />
+          <div className="flex justify-center items-center mx-10 aspect-square w-56">
+            <div className="w-full h-full relative">
+              <Image
+                src={icon}
+                fill
+                alt="icon"
+                className="rounded-full border border-slate-50 absolute inset-0 mx-auto"
+                sizes="(max-width: 1024px) 18vw,
+              22vw"
+                loader={microCMSLoader}
+              />
+            </div>
           </div>
+
           <div className="mx-2 text-center">
             <div className="my-3 space-y-2">
               <h1>Yomek33</h1>
