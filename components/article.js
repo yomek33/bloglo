@@ -24,7 +24,7 @@ export default function Article({
     <div className="flex flex-col  justify-around items-strech">
       <Block bordercolor="border-navy">
         <Title title={title}>
-          <div class=" text-gray-600 text-sm flex items-center">
+          <div className=" text-gray-600 text-sm flex items-center">
             <div>
               {categories.map(({ name, slug }) => (
                 <Link

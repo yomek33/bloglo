@@ -41,7 +41,7 @@ export default function Posts({ posts }) {
                     <span className=" text-xl font-bold bg-gradient-to-r from-pink-200 to-pnik-300 dark:from-purple-800 dark:to-purple-900 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
                       {title}
                     </span>
-                    <p className="m-3">{summary}...</p>
+                    <p className="m-3 line-clamp-4">{summary}...</p>
                   </div>
                 </div>
               </Link>
