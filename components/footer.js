@@ -8,16 +8,16 @@ export default function Footer() {
     <footer className="bottom-0 w-full">
       <Container>
         <div className="flex justify-center items-center">
-          <Block bordercolor="border-yellow" class="w-1/2">
+          <Block bordercolor="border-yellow" className="w-1/2">
             <div className="flex justify-center container items-center px-4 mx-auto">
-              <p>
+              <div>
                 <span>© Moeka Mishima </span>
                 <a href="https://twitter.com/Pk2Ab">
                   <FontAwesomeIcon icon={faTwitter} />
 
                   <span className="sr-only">Twitter</span>
                 </a>
-              </p>
+              </div>
             </div>
           </Block>
         </div>

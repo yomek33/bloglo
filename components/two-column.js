@@ -3,9 +3,9 @@ export function TwoColumn({ children }) {
 }
 
 export function TwoColumnMain({ children }) {
-  return <div className="mr-2 lg:w-3/5  hidden sm:block">{children}</div>;
+  return <div className="lg:mr-2 lg:w-3/5  hidden sm:block">{children}</div>;
 }
 
 export function TwoColumnSidebar({ children }) {
-  return <div className="ml-2 lg:w-2/5">{children}</div>;
+  return <div className="lg:ml-2 lg:w-2/5">{children}</div>;
 }
