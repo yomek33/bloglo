@@ -1,26 +1,23 @@
-import { getAllPosts, getAllCategories } from "lib/api";
+import { getAllCategories, getAllPostsByCategory } from "lib/api";
 import Meta from "components/meta";
 import Container from "components/container";
-import Hero from "components/hero";
 import Posts from "components/posts";
 import { getPlaiceholder } from "plaiceholder";
-import Block from "@/components/block";
+import Hero from "@/components/hero";
+// ローカルの代替アイキャッチ画像
 import { eyecatchLocal } from "lib/constants";
-import Personal from "@/components/personalInfo";
 import {
   TwoColumnList,
   TwoColumnListMain,
   TwoColumnListSidebar,
 } from "@/components/two-column-list";
-
 import Categories from "@/components/category";
-export default function Blog({ posts, categories }) {
+export default function Category({ name, posts, categories }) {
   return (
     <Container>
-      <Meta pageTitle="ブログ" pageDesc="ブログの記事一覧" />
       <TwoColumnList>
         <TwoColumnListMain>
-          <Hero title="Post" subtitle="Recent Posts">
+          <Hero title="Category" subtitle={`#${name}`}>
             <Posts posts={posts} />
           </Hero>
         </TwoColumnListMain>
@@ -32,9 +29,22 @@ export default function Blog({ posts, categories }) {
   );
 }
 
-export async function getStaticProps() {
-  const posts = await getAllPosts(4);
-  const categories = await getAllCategories();
+export async function getStaticPaths() {
+  const allCats = await getAllCategories();
+  return {
+    paths: allCats.map(({ slug }) => `/post/category/${slug}`),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(context) {
+  const catSlug = context.params.slug;
+
+  const allCats = await getAllCategories();
+  const cat = allCats.find(({ slug }) => slug === catSlug);
+
+  const posts = await getAllPostsByCategory(cat.id);
+
   for (const post of posts) {
     if (!post.hasOwnProperty("eyecatch")) {
       post.eyecatch = eyecatchLocal;
@@ -45,8 +55,9 @@ export async function getStaticProps() {
 
   return {
     props: {
+      name: cat.name,
       posts: posts,
-      categories: categories,
+      categories: allCats,
     },
   };
 }
