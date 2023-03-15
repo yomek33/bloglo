@@ -23,7 +23,7 @@ export default function Personal() {
           </div>
           <div className="mx-2 text-center">
             <div className="my-3 space-y-2">
-              <p>Yomek33</p>
+              <h1>Yomek33</h1>
               <p>Undergraduate student in engineering</p>
               <p>currently based in Tokyo/Japan</p>
             </div>

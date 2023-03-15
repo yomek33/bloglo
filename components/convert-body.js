@@ -19,5 +19,9 @@ export default function ConvertBody({ contentHTML }) {
       }
     },
   });
-  return <>{contentReact}</>;
+  return (
+    <>
+      <div className="prose">{contentReact}</div>
+    </>
+  );
 }

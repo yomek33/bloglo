@@ -36,8 +36,8 @@ export default function Article({
                 </Link>
               ))}
             </div>
-            <div class=" right-0 ">
-              <div class=" gap-2 pb-3 text-gray-500 text-xs w-full">
+            <div className=" right-0 ">
+              <div className=" gap-2 pb-3 text-gray-500 text-xs w-full">
                 {publish && (
                   <div className="flex  items-center gap-2 text-gray-500 text-sm w-full">
                     <FontAwesomeIcon

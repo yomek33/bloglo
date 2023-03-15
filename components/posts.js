@@ -25,22 +25,22 @@ export default function Posts({ posts }) {
                   blurDataURL={eyecatch.blurDataURL}
                   className="rounded-lg lg:w-1/3 w-full h-full lg:h-auto object-cover object-center"
                 />
-                <div className="lg:w-2/3 w-full lg:pl-10 lg:py-6 mt-3 lg:mt-0">
+                <div className="lg:w-2/3 w-full lg:pl-10  mt-3 lg:mt-0">
                   <div>
                     {categories.map(({ name, slug }) => (
                       <Link
                         href={`/post/category/${slug}`}
-                        className="text-mint pb-3 inline-block mr-4"
+                        className="text-mint  inline-block "
                         key={slug}
                       >
                         #{name}
                       </Link>
                     ))}
                   </div>
-                  <span className=" bg-gradient-to-r from-pink-200 to-pnik-300 dark:from-purple-800 dark:to-purple-900 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+                  <span className=" text-xl font-bold bg-gradient-to-r from-pink-200 to-pnik-300 dark:from-purple-800 dark:to-purple-900 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
                     {title}
                   </span>
-                  <p>{summary}...</p>
+                  <p className="m-3">{summary}...</p>
                 </div>
               </div>
             </Link>
