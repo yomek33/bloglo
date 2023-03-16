@@ -9,7 +9,7 @@ export default function Categories({ categories }) {
           {categories.map(({ name, slug }) => (
             <Link
               href={`/post/category/${slug}`}
-              className="text-navy pb-3 inline-block mr-4"
+              className="text-navy inline-block mr-4 bg-gradient-to-r from-mint to-mint dark:from-purple-800 dark:to-purple-900 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"
               key={slug}
             >
               #{name}
