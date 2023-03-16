@@ -21,7 +21,7 @@ export default function ConvertBody({ contentHTML }) {
   });
   return (
     <>
-      <div className="prose max-w-none prose-a:decoration-pink-100">
+      <div className="prose max-w-none prose-a:decoration-pink-100 prose-h1:underline prose-h2:underline">
         {contentReact}
       </div>
     </>
