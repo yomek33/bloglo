@@ -34,7 +34,7 @@ export default function Posts({ posts }) {
                           className="text-mint  inline-block "
                           key={slug}
                         >
-                          #{name}
+                          #{name}　
                         </Link>
                       ))}
                     </div>

@@ -1,4 +1,4 @@
-import { getPostBySlug, getAllSlugs } from "lib/api";
+import { getAllCategories, getPostBySlug, getAllSlugs } from "lib/api";
 import { extractText } from "lib/extract-text";
 import { prevNextPost } from "lib/prev-next-post";
 import Meta from "components/meta";
@@ -13,6 +13,7 @@ import { eyecatchLocal } from "lib/constants";
 import Article from "@/components/article";
 import Block from "../../components/block";
 import Comments from "../../components/giscus";
+import Categories from "@/components/category";
 
 export default function Post({
   title,
@@ -23,6 +24,7 @@ export default function Post({
   description,
   prevPost,
   nextPost,
+  allcategories,
 }) {
   const microCMSLoader = ({ src, width, quality }) => {
     return `${src}?auto=format&fit=max&w=${width}`;
@@ -51,6 +53,7 @@ export default function Post({
       <Block bordercolor="border-blue">
         <Comments />
       </Block>
+      <Categories categories={allcategories}></Categories>
     </Container>
   );
 }
@@ -66,9 +69,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const slug = context.params.slug;
-
+  const allcategories = await getAllCategories();
   const post = await getPostBySlug(slug);
-
   const description = extractText(post.content);
 
   const eyecatch = post.eyecatch ?? eyecatchLocal;
@@ -78,7 +80,6 @@ export async function getStaticProps(context) {
 
   const allSlugs = await getAllSlugs();
   const [prevPost, nextPost] = prevNextPost(allSlugs, slug);
-
   return {
     props: {
       title: post.title,
@@ -89,6 +90,7 @@ export async function getStaticProps(context) {
       description: description,
       prevPost: prevPost,
       nextPost: nextPost,
+      allcategories: allcategories,
     },
   };
 }
