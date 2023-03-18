@@ -1,6 +1,8 @@
 import parse from "html-react-parser";
 import Image from "next/image";
-
+import hljs from "highlight.js";
+import "highlight.js/styles/hybrid.css";
+import { docco } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 export default function ConvertBody({ contentHTML }) {
   const contentReact = parse(contentHTML, {
     replace: (node) => {
@@ -16,6 +18,10 @@ export default function ConvertBody({ contentHTML }) {
             className="rounded-lg"
           />
         );
+      } else if (node.name === "code") {
+        const result = hljs.highlightAuto(node.children[0].data);
+        const dom = parse(result.value);
+        return <code className="hljs">{dom}</code>;
       }
     },
   });
