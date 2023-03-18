@@ -17,10 +17,14 @@ export default function ConvertBody({ contentHTML }) {
             className="rounded-lg"
           />
         );
-      } else if (node.name === "code") {
-        const result = hljs.highlightAuto(node.children[0].data);
+      } else if (node.name === "pre" && node.children[0].name === "code") {
+        const result = hljs.highlightAuto(node.children[0].children[0].data);
         const dom = parse(result.value);
-        return <code className="hljs">{dom}</code>;
+        return (
+          <pre className="hljs">
+            <code>{dom}</code>
+          </pre>
+        );
       }
     },
   });
