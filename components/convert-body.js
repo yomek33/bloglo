@@ -1,8 +1,7 @@
 import parse from "html-react-parser";
 import Image from "next/image";
 import hljs from "highlight.js";
-import "highlight.js/styles/hybrid.css";
-import { docco } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import "highlight.js/styles/base16/ros-pine-moon.css";
 export default function ConvertBody({ contentHTML }) {
   const contentReact = parse(contentHTML, {
     replace: (node) => {
