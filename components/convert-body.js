@@ -32,7 +32,7 @@ export default function ConvertBody({ contentHTML }) {
           })
           .trim();
         const result = hljs.getLanguage(lang)
-          ? hljs.highlight(lang, codestring)
+          ? hljs.highlight(codestring, { language: lang })
           : hljs.highlightAuto(codestring);
         const result2 = hljs.highlightAuto(codestring);
         const dom = parse(result.value);

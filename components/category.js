@@ -2,7 +2,7 @@ import Block from "./block";
 import Link from "next/link";
 export default function Categories({ categories }) {
   return (
-    <Block bordercolor="border-purple">
+    <Block bordercolor="border-blue-100">
       <div className="flex flex-col pl-3">
         <div className="text-xl py-3">Category</div>
         <div className="">

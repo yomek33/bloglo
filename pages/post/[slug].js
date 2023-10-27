@@ -50,10 +50,9 @@ export default function Post({
           categories={categories}
         />
       </article>
-      <Block bordercolor="border-blue">
+      <Block bordercolor="border-pink-100">
         <Comments />
       </Block>
-      <Categories categories={allcategories}></Categories>
     </Container>
   );
 }
