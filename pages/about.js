@@ -44,6 +44,13 @@ export default function About() {
         <TwoColumnMain>
           <Block className="min-h-300 w-full max-w-4xl my-5 flex items-center justify-center flex-col">
             準備中....
+            <p>Zennで投稿するかも！</p>
+            <a
+              className="border-b border-b-pink-400"
+              href="https://zenn.dev/yomek33"
+            >
+              yomek33の記事一覧 | Zenn
+            </a>
           </Block>
         </TwoColumnMain>
         <TwoColumnSidebar>
